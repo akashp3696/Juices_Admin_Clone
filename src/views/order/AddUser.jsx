@@ -15,11 +15,11 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { toast } from 'react-toastify';
 import { baseUrl } from '../../utils/data';
 
-const googleMapsApiKey = 'AIzaSyD8qT43Pj2CBQnepwSN3jahcczBeWsyM2k'; // Replace with your actual Google Maps API key
 const baseLocation = { lat: 17.45287804553729, lng: 78.38900685310364 };
 const radiusInMeters = 9000;
 
 const AddUser = () => {
+  const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   const [mobile, setMobile] = useState('');
   const [address, setAddress] = useState('');
   const [pincode, setPincode] = useState('');

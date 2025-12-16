@@ -132,7 +132,7 @@ const AddressDialog = ({
   console.log(newLocation);
 
   const fetchAddressFromLatLng = async (lat, lng) => {
-    const apiKey = "AIzaSyD8qT43Pj2CBQnepwSN3jahcczBeWsyM2k";
+    const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
     const response = await fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`
     );
@@ -247,7 +247,7 @@ const AddressDialog = ({
         ) : (
           <>
             <LoadScript
-              googleMapsApiKey="AIzaSyD8qT43Pj2CBQnepwSN3jahcczBeWsyM2k"
+              googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
               libraries={["geometry"]}
             >
               <GoogleMap
