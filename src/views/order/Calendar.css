@@ -1,0 +1,70 @@
+/* Calendar.css */
+.calendar-container {
+  max-width: 300px; /* Adjust as needed */
+  margin: auto;
+  padding: 20px;
+}
+
+.react-calendar {
+  max-width: 100%;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-calendar__tile--hasActive {
+  background: #b3d9ff !important;
+}
+
+.react-calendar__tile--active {
+  background: #4d94ff !important;
+}
+
+.react-calendar__tile--now {
+  background: #f0f0f0 !important;
+}
+
+.react-calendar__tile--hasInactive {
+  background: #ccc !important;
+}
+
+.react-calendar__tile {
+  padding: 10px;
+  text-align: center;
+}
+
+.delivery-date,
+.pause-date,
+.upcoming-delivery-date,
+.selected-date {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 5px; /* Adjust spacing between dates */
+}
+
+.delivery-date {
+  background-color: green !important;
+  color: white !important;
+}
+
+.pause-date {
+  background-color: red !important;
+  color: white !important;
+}
+
+.upcoming-delivery-date {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+.selected-date {
+  background-color: blue !important;
+  color: white !important;
+}
